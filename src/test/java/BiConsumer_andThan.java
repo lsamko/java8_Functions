@@ -46,7 +46,7 @@ public class BiConsumer_andThan {
 
 
         //To demonstrate how an Exception in the after function is returned and handled.
-        BiConsumer<List<Integer>, List<Integer> > equals1 = (list3, list4) ->
+        BiConsumer<List<Integer>, List<Integer>> equals1 = (list3, list4) ->
         {
             for (int i = 0; i < list3.size(); i++)
                 if (list3.get(i) != list4.get(i)) {
@@ -66,7 +66,7 @@ public class BiConsumer_andThan {
         try {
             display.andThen(null).accept(listA, listB);
             display.andThen(equals1).accept(listA, listB);
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Exception: " + e);
         }
     }
