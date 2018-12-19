@@ -9,7 +9,7 @@ public class Function_compose {
         Function<Integer, Double> half = a -> a / 2.0;
 
         // However treble the value given to half function
-        half = half.compose( a -> 3 * a);
+        half = half.compose(a -> 3 * a);
 
         // apply the function to get the result
         System.out.println(half.apply(3));
@@ -18,8 +18,7 @@ public class Function_compose {
         //To demonstrate when NullPointerException is returned.
         try {
             half.compose(null);
-        }
-        catch (Exception e ){
+        } catch (Exception e) {
             System.out.println("Exception thrown " + e);
         }
     }
