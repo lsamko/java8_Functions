@@ -12,5 +12,17 @@ public class Function_andThen {
 
         // apply the function to get the result
         System.out.println(half.apply(10));
+
+
+        // To demonstrate when NullPointerException is returned.
+        Function<Integer, Double> half1 = a -> a / 2.0;
+
+        try {
+            // try to pass null as parameter
+            half1 = half1.andThen(null);
+        } catch (Exception e) {
+            System.out.println("Exception thrown " +
+                    "while passing null: " + e);
+        }
     }
 }
